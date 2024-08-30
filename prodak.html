@@ -1,0 +1,255 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+         <button class="btn btn-primary">Home</button>
+    <button  class="btn btn-secondary">Prodak</button>
+    <button class="btn btn-success">About</button>
+    <h4 class="mt-3">Selamat Datang</h4>
+    
+    <p>My Prodak</p>
+
+   
+        <div class="sidebar">
+            <a href="index.html"class="btn btn-outline-primary">Home</a>
+            <a href="prodak.html" class="btn btn-outline-secondary">Prodak</a>
+            <a href="about.html" class="btn  btn-outline-info ">About</a> 
+        </div>
+        <!-- <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ </button> -->
+        <div class="input-group mb-3 input-style">
+            <span class="input-group-text">no</span>
+            <input type="text" id="no" class="form-control" aria-label="Bahasa Pemrograman">
+        </div>
+        <div class="input-group mb-3 input-style">
+            <span class="input-group-text">Bahasa Pemrograman</span>
+            <input type="text" id="bahasa" class="form-control" aria-label="Bahasa Pemrograman">
+        </div>
+          <div class="input-group mb-3 input-style ">
+            <span class="input-group-text" id="inputGroup-sizing-default">Gambar</span>
+            <input type="url" id="Gambar" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Tahun Rilis</span>
+            <input type="text" id="Tahun_Rilis" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Pengemabang</span>
+            <input type="text" id="Pengembang" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Palatfrom Yang Digunakan</span>
+            <input type="text" id="Platform" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Kegunaan Utama</span>
+            <input type="text" id="Kegunaan_Utama" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Framework/Library Populer</span>
+            <input type="text" id="Framework_Library_Populer" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Kelebihan</span>
+            <input type="text" id="Kelebihan" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3 input-style">
+            <span class="input-group-text" id="inputGroup-sizing-default">Kekurangan</span>
+            <input type="text" id="Kekurangan" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <button class="btn btn-primary" onclick="addRow()">Add</button>
+
+          <button class="btn btn-danger">Cancel</button>
+
+        <table class="table table-hover table-striped  custom-table table-bordered table-responsive-sm" id = "table" >
+            <thead class="table-dark">
+                <tr>
+                    <th>no</th>
+                    <Th>Bahasa Pemrograman</Th>
+                    <th>Gambar</th>
+                    <th>Tahun Rilis</th>
+                    <th>Pengemabang</th>
+                    <th>Palatfrom Yang Digunakan</th>
+                    <th>Kegunaan Utama</th>
+                    <th>Framework/Library Populer</th>  
+                    <th>Kelebihan</th>
+                    <th>Kekurangan</th>
+                    <th>Aksi</th>
+                    
+                   </tr>
+                
+            </thead>
+            <tbody class="table table-bordered" >
+            <tr >    
+                <td>1</td>   
+                <td>Python</td>
+                <td></td>
+                <td>1991</td>
+                <td>Guido van Rossum</td>
+                <td>Web, Data Science</td>
+                <td>Web Development, Data Science</td>
+                <td>Django, Flask, Pandas, NumPy, SciPy, Matplotlib, Seaborn</td>
+                <td>Mudah Di Pelajari, Ekosistem Library Besar</td>
+                <td>Lebih Lambat Dari C/C++</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center" onclick = deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr  >
+                <td>2</td>
+                <td>JavaScript</td>
+                <td></td>
+                <td>1995</td>
+                <td>Brendan Eich</td>
+                <td>Web, Mobile</td>
+                <td>Web Development, Mobile</td>
+                <td>jQuery, React, Vue.js, Angular</td>
+                <td>Banyak Di Guanakan Di Web</td>
+                <td>Tdiak Konsisten Di Berbagai Web</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center" onclick = deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Java</td>
+                <td></td>
+                <td>1995</td>
+                <td>James Gosling</td>
+                <td>Web, Mobile, Desktop</td>
+                <td>Web Development, Enterprise, Mobile</td>
+                <td>Spring, Hibernate, Struts</td>
+                <td>Portabilitas, Kinerja Baik</td>
+                <td>Verbosity, Kecepatan Eksekusi</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick= deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>C++</td>
+                <td></td>
+                <td>1985</td>
+                <td>Bjarne Stroustrup</td>
+                <td>Desktop, Embedded</td>
+                <td>Sistem Operasi, Game Development</td>
+                <td>Boost, Qt, Unreal Engine</td>
+                <td>Performa Tinggi, Kontrol Memori</td>
+                <td>Kompleksitas, Kesalahan Memori</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick = deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>C#</td>
+                <td></td>
+                <td>2000</td>
+                <td>Microsoft</td>
+                <td>Web, Desktop, Mobile</td>
+                <td>Web Development, Game Development</td>
+                <td>.NET, Unity, Xamarin</td>
+                <td>Integrasi Baik dengan Windows, Sintaks Modern</td>
+                <td>Ketergantungan pada Ekosistem Microsoft</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick=deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Ruby</td>
+                <td></td>
+                <td>1995</td>
+                <td>Yukihiro Matsumoto</td>
+                <td>Web, Scripting</td>
+                <td>Web Development</td>
+                <td>Ruby on Rails, Sinatra</td>
+                <td>Sintaks Bersahabat, Produktivitas Tinggi</td>
+                <td>Performa Lebih Rendah Dibandingkan Bahasa Lain</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick=deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>PHP</td>
+                <td></td>
+                <td>1995</td>
+                <td>Rasmus Lerdorf</td>
+                <td>Web</td>
+                <td>Web Development</td>
+                <td>Laravel, Symfony, CodeIgniter</td>
+                <td>Terintegrasi Baik dengan HTML, Banyak Penggunaan</td>
+                <td>Keamanan, Kinerja</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick=deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Swift</td>
+                <td></td>
+                <td>2014</td>
+                <td>Apple Inc.</td>
+                <td>Mobile, Desktop</td>
+                <td>iOS, macOS Development</td>
+                <td>SwiftUI, Vapor</td>
+                <td>Performa Tinggi, Sintaks Modern</td>
+                <td>Terbatas pada Ekosistem Apple</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick= deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Go</td>
+                <td></td>
+                <td>2009</td>
+                <td>Google</td>
+                <td>Web, Cloud</td>
+                <td>System Programming, Backend</td>
+                <td>Gin, Beego</td>
+                <td>Performa Tinggi, Konkurensi Mudah</td>
+                <td>Kurangnya Fitur yang Canggih</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick=deleteRow(this)></button>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Rust</td>
+                <td></td>
+                <td>2010</td>
+                <td>Graydon Hoare</td>
+                <td>System, Web</td>
+                <td>System Programming, WebAssembly</td>
+                <td>Rocket, Actix</td>
+                <td>Keamanan Memori, Performa Tinggi</td>
+                <td>Kurva Pembelajaran Tajam</td>
+                <td>
+                    <button class="btn btn-danger fa fa-trash" align = "center"onclick=deleteRow(this)></button>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+
+   
+
+
+  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
